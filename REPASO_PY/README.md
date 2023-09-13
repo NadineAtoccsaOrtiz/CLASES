@@ -143,5 +143,5 @@ alumnos=[{},{},{}]
 ```
 
 ## 5. FUNCIONES
-
+## 6. controles de flujo
 
