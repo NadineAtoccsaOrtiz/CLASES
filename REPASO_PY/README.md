@@ -98,9 +98,10 @@ salud2 = 'hola'+' '+'mundo'
 el resultado es hola mundo
 - suma y multiplicacion de palabras
 ```python
-saludos = 'hola '+'mundo' * 3
-el resultado es , mundomundomundohola 
+saludos = 'hola '+'mundo' * 3 
 ```
+el resultado es , mundomundomundohola
+
 ## 4. DATOS ESTRUCTURADOS
 datos que ya tienen una estrutura, exiten dos tipos
 + las listas
