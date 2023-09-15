@@ -143,6 +143,100 @@ alumnos=[{},{},{}]
 
 ```
 
-## 5. FUNCIONES
-## 6. controles de flujo
+## 5. controles de flujo
+Existen solo 2:
++ desiciones
+
+solo se va ejecutar el codigo si cumple o si la condicion es verdadera, podemos hacer que si la condicion sea falsa se ejecute otro codigo
+
+``Ejemplo de sintaxis``
+
+Primero especificar el codigo que se ejcutara si cumple una condicion 
+```python
+if  <condicion>:
+```
+El codigo que deseamos ejecutar, si la condicion es verdadera  
+ ```python
+    print("ejecuta esto")
+ ```
+Aqui estamos fuera del if o del (si), este codigo siempre se ejecutara, por que estan en la misma altura , es decir depende de la identacion 
+```python
+print("esto siempre se ejecuta")
+```
+
+``Ejemplo de sintaxis mas complejo``
+
+si queremos que se ejecute un codigo en caso sea falso, para eso tenemos la condicion else.
+```python
+if <condicion falsa>:
+    print('si es verdadero ejecuta esto')
+else:
+    print('si es falso ejecuta esto')
+
+```
+>NOTA:
+    - mayor --> (>)
+    - menor --> (<)
+  
+``Ejemplo``
+
+```python
+if 15>18
+    print('si es verdad imprime esto')
+else:
+    print('si es falso imprime esto')
+```
+``Otro ejemplo``
+```python
+if 15*12==30:
+    print('si es verdad imprime esto')
+else:
+    print('si es falso imprime esto')
+```
+``Ejemplo mas complejo``
+```python
+condicion=True
+if condicion:
+    print('si es verdad imprime esto')
+else:
+    print('si es falso imprime esto')
+```
+
++ ciclos
+
+    Existen 2 tipos:
+  - iterar cuando sabemos la cantidad de veces que se va repetir  
+  para este caso existe el for 
+  
+    ``sintaxis`` 
+
+    Despues de la palabra reservada bfor dberemos crear una variable que almacene el numero que iremos iterando, es decir repitiendo.
+    Luego tendremos que indicar el rango a iterra o losm elementos a iterar.
+
+
+    ```python
+    for i in range(1,5):
+        print(i)
+    ```
+    ```python
+    vocales=['a','e','i','8','u']
+    for i in vocales:
+        print(i)
+    ```
+    ```python
+    numeros=[45,12,75,10,56]
+    for i in numeros:
+        print(i)
+    ```
+  - iterar cuando no sabemos la cantidad de veces que se va repetir 
+
+
+
+
+
+
+
+
+## 6. FUNCIONES
+
 
