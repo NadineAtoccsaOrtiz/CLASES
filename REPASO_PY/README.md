@@ -230,7 +230,7 @@ else:
     ```
   - iterar cuando no sabemos la cantidad de veces que se va repetir, para eso usamos while
   todas las condiciones que son verdaderas (true) van a permitir que el codigo se ejecute, evalua si la condicion es verdadera al igual que for. si es falso (false) no ejecuta
-  
+
     ```python
     condicion=True
     while condicion:
@@ -240,10 +240,30 @@ else:
             condicion=False
     ```
 
-
-
-
-
 ## 6. FUNCIONES
+Existen 2 tipos de funciones:
+
+1. Propias del lenguaje
+
+    Ya vienen creadas e insertadas en el lenguaje en  python y estan listas para ser usadas. 
+``Estructura de uso de una funcion``
+    - tiene el nombre seguido de un parentecis.
+        ```python
+        funcion()
+        ```
+    - dentro del parentesis podremos pasarle datos que necsita la funcion para ejecutarse. 
+    
+    - Esta es un afuncion que sirve para mostrtar datos por medio de la consola.
+        ```pyhton
+        print('hola')
+        len('dato')
+        ```
+    - Esta funcion nos permite saber la longitud de una lista o un string. Len nos devuelve un numero
+        ```pyhton
+        len('dato')
+        print(len([1,2,3,4,5]))
+        ```
+
+2. funciones creadas
 
 

@@ -36,10 +36,20 @@
 
 
 ## 4. crear un programa que me pida un numero y lo evalue con el numero premiado el programa finalizara, si el numero igresado es incorrecto el programa seguira pidiendo el numero premiado
-while True:
-    numero=int(input('ingresa un numero: '))
-    if numero == 5:
-        print('correcto, ganaste el premio')
-        break
-
+#while True:
+#    numero=int(input('ingresa un numero: '))
+#    if numero == 5:
+#        print('correcto, ganaste el premio')
+#        break
+## otra forma
+numero_ganador=50
+condicion=True
+while condicion:
+    numero_ingresado=int(input('ingresa un numero: '))
+    if numero_ingresado == numero_ganador:
+        print('ganaste hvnz')
+        condicion=False
+    else:
+        print('sigue intentando')
+        
 
