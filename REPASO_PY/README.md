@@ -263,7 +263,10 @@ Existen 2 tipos de funciones:
         len('dato')
         print(len([1,2,3,4,5]))
         ```
-
+    - Esta es una funcion que se detiene a esperar que el usuario introduzca informacion. Entre parentesis podremos escribir un mensaje que indique que accion realizara el usuario.
+        ```python
+        input('ingresa un dato')
+        ```
 2. funciones creadas
 
 
