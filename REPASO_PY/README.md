@@ -230,6 +230,7 @@ else:
     ```
   - iterar cuando no sabemos la cantidad de veces que se va repetir, para eso usamos while
   todas las condiciones que son verdaderas (true) van a permitir que el codigo se ejecute, evalua si la condicion es verdadera al igual que for. si es falso (false) no ejecuta
+  
     ```python
     condicion=True
     while condicion:
