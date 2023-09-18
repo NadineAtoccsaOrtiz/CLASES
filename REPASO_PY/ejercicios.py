@@ -28,5 +28,9 @@ if total_compra >= 1000:
 else:
     print(f'no eres acrededor del descuento del 20%, total de tu compra a pagar es {total_compra}.☹')
 
+## 3. crear un programa que me pida 5 veces un nombre y por cada vez que lo pida muestre la cantidad de veces que ingreso el nombre
+## 4. crear un programa que me pida un numero y lo evalue con el numero premiado el programa finalizara, si el numero igresado es incorrecto el programa seguira pidiendo el numero premiado
+ 
+
 
 
