@@ -241,6 +241,8 @@ else:
     ```
 
 ## 6. FUNCIONES
+Las funciones son miniprogramas, tambien se les conoce como modulos o fragmentos de codigo de uso exclusivo y especifico.
+
 Existen 2 tipos de funciones:
 
 1. Propias del lenguaje
@@ -330,7 +332,7 @@ Existen 2 tipos de funciones:
         id=url.split('=').pop
         print(id)
         ```
-        pop alamcena el dato que eliminamos, solo debemos almacenarlos en una variable para mostrarlo
+        pop almacena el dato que eliminamos, solo debemos almacenarlos en una variable para mostrarlo
         ```python
         lista=[15,12,50]
         eliminado=lista.pop()
@@ -340,6 +342,62 @@ Existen 2 tipos de funciones:
 
 
 
-1. funciones creadas
+2. funciones creadas
 
+    son funciones que el usuario lo crea para su uso
 
+    pasos para crear una funcion prpopia
+
+    1. hacer uso de la palabra reservada. 
+
+    2. definir un nombre de funcion que describa que tarea va realizar.
+
+    3. establecer los parametros que recibira la funcion entre parentesis.
+   
+    4. establecer que valor o dato va retornar mi funcion con la palabra reservada return
+
+    observacion: tambien podemos hacer uso de la funcion print para retornar un mensaje.
+
+> exissten dos tiposn de funciones dentro de las funciones creadas
+las que no reciben ningun parametro como pop y los que si reciben parametros como print.
+
+``` python
+def saludo():
+print('hola este es un saludo')
+
+```
+¿como hacemos uso de la funcion?
+ponemos el nombre de la funcion acompañado de parentesis al final.
+```python
+saludo()
+```
+mi funcion con parametros
+```python
+def mi_print(texto):
+    print(texto)
+
+print('print de python')
+mi_print('hola este es mi print creado')
+```
+```python
+def suma(a,b):
+    total=a+b
+    return total
+mi_print(suma(45+12)) #==> 57
+
+```
+ejemplo
+para que se usa esta funcion?
+max( ) muestra numero mayor
+
+crear mi propia funcion que haga lo mismo
+```python
+lista=[12,45,78,3,1]
+def mi_max(lista): #===>>> la funcion que estoy creando
+    numero_mayor=lista[0]
+    for numero in lista:
+        if numero > numero_mayor:
+        numero_mayor=numero
+return numero_mayor
+mi_print(mi_max(lista)) #===>>> mi_print es la funcion vacia que cree arriba, donde tiene en parentesis (texto)
+```
