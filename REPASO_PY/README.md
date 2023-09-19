@@ -263,10 +263,83 @@ Existen 2 tipos de funciones:
         len('dato')
         print(len([1,2,3,4,5]))
         ```
-    - Esta es una funcion que se detiene a esperar que el usuario introduzca informacion. Entre parentesis podremos escribir un mensaje que indique que accion realizara el usuario.
+    - Esta es una funcion que se detiene a esperar que el usuario introduzca informacion (input). Entre parentesis podremos escribir un mensaje que indique que accion realizara el usuario.
         ```python
         input('ingresa un dato')
         ```
-2. funciones creadas
+    - Esta es una funcion que nos muestra el numero mayor de una lista.(max)
+        ```python
+        lista=[45,12,45,11,78,62]
+        numero_mayor=max(lista)
+        print(numero_mayor)
+        ```
+    - esta funcion nos muestra el numero menor de una lista. (min)
+        ```python
+        lista=[45,12,45,11,78,62]
+        numero_menor=min(lista)
+            print(numero_menor)
+        ```
+    - Opcion para vonvertir de un string a un numero entero. (string a int) 
+  
+        ``` python
+        numero_string='100'
+        numero_entero=int(numero_string)
+        print(numero_entero)
+        
+
+
+        ```
+        int('100') --> 100 --> entero
+    - opcion para convertir un entero a string. 
+        ```python
+        numero_entero=100
+        numero_entero=str(numero_string)
+        print(numero_string)
+        ```
+        str(100) --> '100' --> string
+    - Funcion de python que nos permite agregar elemntos al final de una lista.(append)
+        ```python
+        lista=[15,12,50]
+        elemento=100
+        lista.append(elemento)
+        print(lista)
+        ```
+    - funcion de python que nos permite eliminar los elementos que se encuentran al final de un alista.(pop)
+        ```python
+        lista=[15,12,50]
+        lista.pop()
+        print(lista)
+        ```
+    - funcion de python que nos permite agregar elementos en cuaqluier posicion de mi lista para eso se le tiene que pasar dos parametros, primero indicarle el indice y el dato que se va agregar. (insert)
+        ```python
+        lista_nombres=['jory','nadine','bichota']
+        lista_nombres.insert(1,'satan')
+        print(lista_nombres)
+        ```
+    - Esta funcion nos permite eliminar elementos de cualquier pocision de una lista, esta funcion recibe solo el elemento que deseamoseliminar.(remove)
+        ```python
+        lista=[1,2,3,4,5]
+        lista.remove(3)
+        print(lista)
+        ```
+    - Funcion que nos permite dividir en una lista, una cadena 
+        ```python
+        cadena='hola como tas'
+        lista=cadena.split()
+        url='www.golle.com/id=7074665'
+        id=url.split('=').pop
+        print(id)
+        ```
+        pop alamcena el dato que eliminamos, solo debemos almacenarlos en una variable para mostrarlo
+        ```python
+        lista=[15,12,50]
+        eliminado=lista.pop()
+        print(eliminado)
+        ```
+
+
+
+
+1. funciones creadas
 
 
