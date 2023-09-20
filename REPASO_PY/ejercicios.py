@@ -42,14 +42,88 @@
 #        print('correcto, ganaste el premio')
 #        break
 ## otra forma
-numero_ganador=50
-condicion=True
-while condicion:
-    numero_ingresado=int(input('ingresa un numero: '))
-    if numero_ingresado == numero_ganador:
-        print('ganaste hvnz')
-        condicion=False
-    else:
-        print('sigue intentando')
+#numero_ganador=50
+#condicion=True
+#while condicion:
+#    numero_ingresado=int(input('ingresa un numero: '))
+#    if numero_ingresado == numero_ganador:
+#        print('ganaste hvnz')
+#        condicion=False
+#    else:
+#        print('sigue intentando')
         
 
+## 5. crear una funcion por cada operador arimetico que reciba dos parametros y retorne el resultado de la operacion
+## ojo, crearse una funcion quq nos permita imprimir el resultado
+
+#op=(input('ingresa la operacion que quieres realizar'))
+def mostrar(texto):
+    prin(texto)
+
+def sumar(resultado):
+    suma =num1+num2
+    print("el resultado de la suma es: ", suma)
+    
+def restar(resultado):
+    resta =num1-num2
+    print("el resultado de la resta es: ", resta)
+
+def multiplicar(self):
+    multiplicacion =num1*num2
+    print("el resultado de la multiplicación es: ", multiplicacion)
+
+def dividir(self):
+    divicion =num1/num2
+    print("el resultado de la divición es: ", divicion)
+
+#op=(input('ingresa la operacion que quieres realizar'))
+
+#num1 = 12
+#num2 = 11
+
+
+## otra forma
+#def mi_print(texto):
+#    print(texto)
+#def suma(a,b):
+#    return a+b
+#def resta(a,b):
+#    return a-b
+#def multiplicacion(a,b):
+#    return a*b
+#def division(a,b):
+#    return a/b
+
+#mi_print(suma(a,b))
+#mi_print(resta(a,b))
+#mi_print(multiplicacion(a,b))
+#mi_print(dividir(a,b))
+
+
+## 6. Escribe una funcion que reciba un numero entero positivo y devuelva su factorial
+
+num = int(input('ingresa un numero positivo: '))
+
+def factorial(n):
+    if n == 0:
+        return 1
+    if num < 0: 
+        print("error, ingresaste un numero negativo")
+    else:
+        return n * factorial(n - 1)
+result = factorial(num)
+print(result)
+
+## 7. escribir una funcion que reciba como parametros una lista de numeros y retorne una nueva lista con el cuadro de cada numero de la lista ingresada
+lista_numeros=[2,4,8]
+def funcion(lista):
+    nueva_lista=[]
+    for numero in lista:
+        nueva_lista.append(numero**2)
+    return nueva_lista
+#print(funcion(45,50,15,20))
+
+print(funcion(lista_numeros))
+
+
+## 8. escribir un programa que reciba una cadena de caracteres y devuelva un objeto con cada palabra que contiene y su frecuencia

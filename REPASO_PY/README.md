@@ -388,6 +388,7 @@ mi_print(suma(45+12)) #==> 57
 ```
 ejemplo
 para que se usa esta funcion?
+
 max( ) muestra numero mayor
 
 crear mi propia funcion que haga lo mismo
@@ -401,3 +402,28 @@ def mi_max(lista): #===>>> la funcion que estoy creando
 return numero_mayor
 mi_print(mi_max(lista)) #===>>> mi_print es la funcion vacia que cree arriba, donde tiene en parentesis (texto)
 ```
+- funcion con muchos parametros
+```python
+def funcion(a,b,c,d,e,f,g,h,i,j,k): #--- muy largo
+    # n parametros, la cantidad de parametros que quiera
+def funcion(*args): # ->> le pongo el nombre que quiuera, el prota de la funcion en si es (*)
+funcion(1,2,3,4,5)
+def funcion(*muchos_parametros):
+    total=0
+    for numero in muchos_parametros:
+        total=total+numero
+    return total
+print(funcion(45,50,15,20))
+```
+
+```python
+def datos (*args):
+    nombre=args[0]
+    apellido=args[1]
+    edad=args[2]
+    return f'mi nombre es,{nombre},{apellido} y mi edad es,{edad}
+print(datos('edwin','apellido','50'))
+```
+> pythontutor.com
+> factorial de 5 --> 5*4**3*2*1=
+
