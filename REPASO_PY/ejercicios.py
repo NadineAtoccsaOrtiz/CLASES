@@ -128,10 +128,6 @@ def funcion(lista):
 
 print(funcion(lista_numeros))
 
-
-## 8. escribir un programa que reciba una cadena de caracteres y
-# devuelva un objeto con cada palabra que contiene y su frecuencia
-
 ## 8. Escribir un programa que reciba una cadena de caracteres y 
 # debuelva un objeto con cada palabra que contiene y su frecuencia
 def frec_palabras(cadena):
