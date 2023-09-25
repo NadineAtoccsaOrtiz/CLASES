@@ -92,7 +92,7 @@ En el ecosistema de Python, hay varios entornos de desarrollo y herramientas pop
 
 6. ``Spyder:`` Spyder es otro IDE especializado en ciencia de datos que ofrece características específicas para análisis de datos y programación científica. 
 
-7. ``Pyenv:`` Pyenv es una herramienta que permite gestionar múltiples versiones de Python en un sistema y cambiar fácilmente entre ellas. 
+7. ``Pyenv:`` Pyenv es una herramienta que permite gestionar múltiples versiones de Python en un sistema y cambiar fácilmente entre ellas. controlador de versiones de python
 
 8. ``Pipenv:`` Es una herramienta que apunta a traer todo lo mejor del mundo de empaquetado (bundler, composer, npm, cargo, yarn, etc.). Automáticamente crea y maneja un entorno virtual para tus proyectos, también como agregar/remover paquetes desde tu Pipfile como instalar/desisntalar paquetes. También genera el más importante Pipfile.lock, que es usado para producir determinado build.
 
