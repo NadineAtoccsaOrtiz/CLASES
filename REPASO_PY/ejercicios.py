@@ -100,7 +100,8 @@ def dividir(self):
 #mi_print(dividir(a,b))
 
 
-## 6. Escribe una funcion que reciba un numero entero positivo y devuelva su factorial
+## 6. Escribe una funcion que reciba un numero entero 
+# positivo y devuelva su factorial
 
 num = int(input('ingresa un numero positivo: '))
 
@@ -114,7 +115,9 @@ def factorial(n):
 result = factorial(num)
 print(result)
 
-## 7. escribir una funcion que reciba como parametros una lista de numeros y retorne una nueva lista con el cuadro de cada numero de la lista ingresada
+## 7. escribir una funcion que reciba como parametros una lista 
+# de numeros y retorne una nueva lista con el cuadro de cada numero 
+# de la lista ingresada
 lista_numeros=[2,4,8]
 def funcion(lista):
     nueva_lista=[]
@@ -126,4 +129,23 @@ def funcion(lista):
 print(funcion(lista_numeros))
 
 
-## 8. escribir un programa que reciba una cadena de caracteres y devuelva un objeto con cada palabra que contiene y su frecuencia
+## 8. escribir un programa que reciba una cadena de caracteres y
+# devuelva un objeto con cada palabra que contiene y su frecuencia
+
+## 8. Escribir un programa que reciba una cadena de caracteres y 
+# debuelva un objeto con cada palabra que contiene y su frecuencia
+def frec_palabras(cadena):
+    frecuencia_palabras = {}
+    palabras = cadena.split()
+
+    for palabra in palabras:
+        if palabra in frecuencia_palabras:
+            frecuencia_palabras[palabra] += 1
+        else:
+            frecuencia_palabras[palabra] = 1
+
+    return frecuencia_palabras
+
+cadena =input('Ingresa un texto: ')
+resultado = frec_palabras(cadena)
+print(resultado)
