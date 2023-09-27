@@ -33,10 +33,10 @@ source venv_uno/Scripts/activate
 > NOTA:
 > 
 > en caso de que no corra en bash, podemos usar powershell, seleccionamos powershell como terminal predeterminado ejecutar el siguiente comando
-```PowerShell
+```bash
 venv/Scripts/Activate.ps1
 ```
-## PARA INSTALRA PAQUETES N NUESTRO ENTORNO
+## PARA INSTALAR PAQUETES N NUESTRO ENTORNO
 1. primero verificamos que no tengamos el paquete instalado y lo listamos con el siguiente comando, debemos tener activado nuestro entorno virtual primero
 ```bash
 pip list
@@ -47,4 +47,22 @@ pip install <nombre del paquete>
 #ejemplo
 pip intsall pandas
 ```
-3. 
+3. deactivate para desactivar el venv
+
+> nota
+> para powershell
+> escribir las iniciales de la carpeta y clic en tap(la tecla de dos flechas) para autocompletar la ruta del archivo
+
+para activar los scripts y evitar errores
+abrir y ejecutar como administrador el powershell
+dentro 
+```bash
+Get-ExecutionPolicy
+```
+
+para quitar la restriccion
+```bash
+Set-ExecutionPolicy Unrestricted
+```
+
+> clic derecho propiedades, activar uso de contrl c
