@@ -23,3 +23,4 @@ print(respuesta.ladrar())
 print(respuesta.corre(10))
 
 
+## EJEMPLO

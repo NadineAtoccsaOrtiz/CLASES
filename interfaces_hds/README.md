@@ -31,6 +31,18 @@ from tkinter import *
 from tkinter import ttk
 ```
 
+```python
+import tkinter
+
+w = tkinter.Tk()                     # crea un objeto de la clase Tk
+w.title('Ventana Tkinter')           # título de la ventana
+w.geometry('450x100+200+100')        # posición y tamaño
+tkinter.Label(w, text='Hola').pack() # introducimos un widget
+w.mainloop()                         # inicia el bucle de eventos
+```
+
+
+
 # modo de uso
 
 Para usar Tkinter en Python, primero debes asegurarte de que Tkinter está instalado en tu computadora. En la mayoría de las distribuciones de Python, Tkinter ya está incluido en la instalación estándar de Python, pero si no lo tienes, deberás instalarlo.
