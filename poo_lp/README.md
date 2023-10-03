@@ -8,4 +8,5 @@ Es un paradigma (estilo, regla, patron, o ejemplo que se debe seguir) de program
  ## ejemplo
  un animal- puede caminar, comer, saltar, correr
 
- #
+ - clase generales
+ - instancia propios

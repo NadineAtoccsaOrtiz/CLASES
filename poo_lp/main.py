@@ -11,6 +11,7 @@ class perro:
         responde= f"corriste {pasos}, pasos."
         return responde
 ## instanciar (almacenar dentro de una variavle) a mi class(clase), llamo a mi clase y lo convierto en un objeto
+# self relacionra la funcion con la clase
 objeto={
     "nombre":"ruth",
     "apellido":"del rio"

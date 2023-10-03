@@ -1,5 +1,5 @@
 # 1. haciendo uso de la poo crear un objeto para la entidad "celular"
-class celular: 
+class Celular: 
     marca='samsung'
     propietario='you'
     color='blue'
@@ -16,14 +16,14 @@ class celular:
 
         return app
 
-respuesta=celular()
+respuesta=Celular()
 print(respuesta.marca)
 print(respuesta.llamar("maria"))
 print(respuesta.escribir("hola, como estas", "emma"))
 print(respuesta.abrir_app("whatsapp"))
 
 # 2. haciendo uso de la poo crear un objeto para la entidad "vehiculo"
-class vehiculo: 
+class Vehiculo: 
     marca='mercedes'
     propietario='you'
     color='rojo'
@@ -38,14 +38,14 @@ class vehiculo:
         direccion=f"giraste hacia la {direcc}."
         return direccion
 
-resp=vehiculo()
+resp=Vehiculo()
 print(resp.marca)
 print(resp.acelerar(40))
 print(resp.frenar())
 print(resp.girar("derecha"))
 
 # 3. haciendo uso de la poo crear un objeto para la entidad "avion"
-class avion: 
+class Avion: 
     marca='Boeing'
     propietario='you'
     color='blanco'
@@ -60,7 +60,7 @@ class avion:
         direccion=f"giraste hacia la {direcc}."
         return direccion
 
-re=avion()
+re=Avion()
 print(re.marca)
 print(re.despegar(120))
 print(re.aterrizar())
@@ -68,7 +68,7 @@ print(re.girar("izquierda"))
 
 # 4. haciendo uso de la poo crear un objeto para un "heroe de dota2"
 
-class heroe: 
+class Heroe: 
     nombre='Abaddon'
     daño='daño: 23'
     vida='vida: 460'
@@ -89,7 +89,7 @@ class heroe:
         daño=f'Usaste el ataque << maldicion del averno >>, con una duracion de {duracion}, con una relentizacion de {relentizacion}% y con una velocidad de {velocidad}.😲'
         return daño
     
-rpta=heroe()
+rpta=Heroe()
 print(rpta.nombre)
 print(rpta.daño)
 print(rpta.vida)
@@ -105,3 +105,97 @@ if ataque=='espiral de niebla':
 else:
     print('error')
 
+## 5. haciendo uso de la poo crear un objeto para una pc
+class Pc:
+    marca='hp'
+    modelo='pavilion'
+    procesador='intel core i7'        
+    ram=' 16GB'
+    almacenamiento='1TB'
+    
+    def encendido(self):
+        print(f'''Ecendiendo equipo
+        .....cargando recursos.....''')
+        return 
+    def apagado(self):
+        print(f'''Apagando el equipo...
+        🌐🌀''')
+        return 
+
+dev=Pc()
+print(dev.marca)
+print(dev.procesador)
+print(dev.encendido())
+print(dev.apagado())
+
+## 6. haciendo uso de la poo crear un objeto para una impresora
+
+class Impresora:
+    marca='Epson'
+    modelo='g-3456'
+    capacidad='capacidad: 5,350 páginas'       
+    
+    def imprimir(self, colores, hojas):
+        impr=f'La impresion esta siendo procesada, la impresion saldra a {colores}, cantidad de hojas: {hojas}.'
+        return impr
+    def copia(self, colores):
+        copiar=(f'''
+        La copia esta siendo procesada, 
+        ................
+        la copia saldra a {colores}.
+        ''')
+        return copiar
+    def escanear(self, format):
+        escan=f'Escaneando documento: La hoja escaneada se guardara en fomato {format}, en tus archivos.'
+        return escan
+de=Impresora()
+print(de.marca)
+print(de.capacidad)
+print(de.imprimir('b/n','10'))
+print(de.copia('colores'))
+print(de.escanear('pdf'))
+
+## 7. haciendo uso de poo crear un objeto para emiotir una factura
+
+class Factura:
+    empres='Distribuidora AZUL E.I.R.L'
+    razon_social='CLIENTE: constructora fym'
+    ruc_o_dni='20609976285'
+    direccion='jr ayacucho 285'
+    tipo_moneda='soles'
+
+    def emitir_fac(self, razon, ruc, dire, monto):
+        fac=f'''
+        FACTURA Nº 345
+        ---------------------------
+        Razon Social: {razon}
+        RUC: {ruc}
+        Direccion: {dire}
+        Moneda=: Soles
+        Monto: {monto}
+        
+        Gracias por su compra.
+        '''
+        return fac
+    def anular_fac(self, ope, numero_fac):
+        anular=f'''
+        NOTA DE CREDITO Nº 189
+        ---------------------------
+        Operacion: {ope}
+        Nº de factura: {numero_fac}
+        
+        Emitiendo NOTA DE CREDITO
+        .........................
+        '''
+        return anular
+
+factura=Factura()
+print(factura.empres)
+
+operacion=(input('Ingresa la operacion a realizar:  '))
+if operacion=='factura':
+    print(factura.emitir_fac('CONSTRUCTORA FYM','20146526','JR Ayacucho 453', 's/ 1,899.52'))
+if operacion=='nota de credito':
+    print(factura.anular_fac('Anulacion','345'))
+else:
+    print('error')
