@@ -199,3 +199,156 @@ if operacion=='nota de credito':
     print(factura.anular_fac('Anulacion','345'))
 else:
     print('error')
+
+# celulares
+class Celular:
+    # atributos tipo clase
+    #que son iguales para todos los objetos 
+    # que se creen
+    familia='Smart Fhone'
+    # se sobre escribe cuando coincide el mismo nombre de variable
+
+
+    #atributos de instancia
+    # son atributos propios del objeto
+    # creamos una funcion inicializadora
+    def __init__(self, marca, modelo, imei, nrocelular):
+        self.marca=marca
+        self.modelo=modelo
+        self.imei=imei
+        self.nrocelular=nrocelular
+    # funcionalidades
+    def llamar(self, destino):
+        return f'llamando a {destino}'
+
+    #objeto cecular jory
+llamandojory=Celular('poco','x5','723576456','67867867876')
+#instanciando mi clase - creadon mi objeto celular
+print(llamandojory.marca)
+print(llamandojory.familia)
+print(llamandojory.llamar('china'))
+
+#objeto celular nadine
+llamandonadine=Celular('alcatel','basic','715345646','6424564566')
+
+print(llamandonadine.marca)
+print(llamandonadine.familia)
+print(llamandonadine.llamar('ollanta'))
+
+    
+
+## crear un objeto con POO de una laptop con 2 atributos de clase y 
+# 5 atributos de instancia, dbeer a de tener hasta tres funcionalidades como minimo
+# crea tres objetos instancia de clase distintos
+# OJO SOLO UTILIZAR LO QUE HEMOS HECHO EN CLASES
+
+class Laptop:
+    tipo='Computadora portátil'
+    tamaño='13.3 o 14 pulgadas'
+
+
+    def __init__(self, marca, procesador, ram, sdd, almacenamiento):
+        self.marca=marca
+        self.procesador=procesador
+        self.ram=ram
+        self.sdd=sdd
+        self.almacenamiento=almacenamiento
+
+    
+
+    
+    def prender(self, ):
+        encender=f'''ENCENDIENDO LA PC
+        .............................................'''
+        return encender
+    def apagar(self, ):
+        apagado=f'''APAGANDO EL EQUIPO
+        .............................................'''
+        return apagado
+    def app(self, apk):
+        abrir_app=f'abriendo {apk} en la pc.'
+        return abrir_app
+    def info(self):
+        respuesta=f'''
+        ___________________________
+        tipo: {self.tipo}
+        marca | modelo | ram | t.disco | almacenamiento
+        {self.marca}{self.modelo}{self.ram}{self.sdd}{self.almacenamiento}
+        ___________________________'''
+        return respuesta
+
+
+equipo1=Laptop('lg','intel','8gb','128 gb','1T')
+print(equipo1.tipo)
+print(equipo1.prender)
+print(equipo1.app('canva'))
+
+
+equipo2=Laptop('hp','intel','8gb','128 gb','1T')
+print(equipo2.tipo)
+print(equipo2.apagar)
+print(equipo2.app('whatsapp'))
+
+equipo3=Laptop('hp','intel','8gb','128 gb','1T')
+print(equipo3.info)
+
+
+## decoradores en python averiguar
+
+
+## crear una clase mercado que tenga un atributo de clase y 5 atributos de instancia y 5 funcionalidades
+# debera crear 4 instancias de la clase emrcado, ejemplo puesto mechita, etc
+class Puesto_mercado:
+    mercado='publico'
+
+    def __init__(self, tamaño, nombre, dueño, tipo, ubicacion):
+        self.tamaño=tamaño
+        self.nombre=nombre
+        self.dueño=dueño
+        self.tipo=tipo
+        self.ubicacion=ubicacion
+    
+    def vende(self, producto):
+        vender=f'vendiendo tipo de producto: {producto}.'
+        return vender
+    def abrir(self, turno):
+        horario=f'abrir puesto en turno, {turno}'
+        return horario
+    def cerrar(self, turno_c):
+        horario_c=f' cerrar puesto en turno, {turno_c}'
+        return horario_c
+
+
+
+puesto1=Puesto_mercado('30 x 302','lulu','Lucia garriazo','abarrotes','puquio')
+print(puesto1.mercado)
+print(puesto1.nombre)
+print(puesto1.vende('leche'))
+print(puesto1.cerrar('mañana'))
+
+puesto2=Puesto_mercado('30 x 20','bigote','pedro carrasco','verduras','puquio')
+print(puesto2.mercado)
+print(puesto2.nombre)
+print(puesto2.vende('papa'))
+print(puesto2.cerrar('tarde'))
+
+
+puesto3=Puesto_mercado('40 x 45','elena','maria elena ','frutas','puquio')
+print(puesto3.mercado)
+print(puesto3.nombre)
+print(puesto3.vende('manzana'))
+print(puesto3.cerrar('noche'))
+
+
+puesto4=Puesto_mercado('50 x 50','pepa','milena perez','ropa','puquio')
+print(puesto4.mercado)
+print(puesto4.nombre)
+print(puesto4.vende('casca'))
+print(puesto4.cerrar('mañana'))
+
+
+puesto5=Puesto_mercado('50 x 50','marta','martha torres','electrodomesticos','puquio')
+print(puesto5.mercado)
+print(puesto5.nombre)
+print(puesto5.vende('cocina'))
+print(puesto5.cerrar('tarde'))

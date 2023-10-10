@@ -24,7 +24,7 @@ class Laptop:
     def app(self, apk):
         abrir_app=f'abriendo {apk} en la pc.'
         return abrir_app
-    def info(self):
+    def info(self, marca, procesador, ram, sdd, almacenamiento):
         respuesta=f'''
         ___________________________
         tipo: {self.tipo}
@@ -36,14 +36,15 @@ class Laptop:
 
 equipo1=Laptop('lg','intel','8gb','128 gb','1T')
 print(equipo1.tipo)
-print(equipo1.prender)
+print(equipo1.prender())
 print(equipo1.app('canva'))
 
 
 equipo2=Laptop('hp','intel','8gb','128 gb','1T')
 print(equipo2.tipo)
-print(equipo2.apagar)
+print(equipo2.apagar())
 print(equipo2.app('whatsapp'))
 
 equipo3=Laptop('hp','intel','8gb','128 gb','1T')
-print(equipo3.info)
+print(equipo3.tipo)
+print(equipo3.info())

@@ -1,19 +1,9 @@
-# PROGRAMACION ORIENTADA A OBJETOS (POO)- _OBJET ORIENT PROGRAMING(OOP)_
-Es un paradigma (estilo, regla, patron, o ejemplo que se debe seguir) de programacion.
+# ATRIBUTOS DE CLASE Y ATRIBUTOS DE INSTANCIA
 
-POO es un modelo de como programar
+## Diferencia entre un atributo de clase y un atributo de instancia
+> Los atributos de instancia pertenecen a dicha instancia, es decir, podemos crear otras instancias provenientes de la misma clase, con distintos atributos.
 
-``OBJETIVO:`` El objetivo es organizar el codigo de manera que se asemeje a como pensamos en la vida real.
- 
-Se basa en objetos y en la POO es toda entidad que se puede describir a traves de **atributos** y las **funciones** que puede realizar la entidad.
-
- # Ejemplo
- Un animal: 🐶
-  puede caminar, comer, saltar, correr, etc.
-
- - clase generales
- - instancia propios
-
+> Por otro lado los atributos de clase pertenecen a dicha clase y por tanto siempre que dicha clase sea creada, se inicializará con el mismo atributo de clase. Que se puede cambiar en todas las instancias, simplemente llamando a la clase. 
 
 ## EJEMPLO CELULARES 📱
 ```python
@@ -51,3 +41,4 @@ print(llamandonadine.marca)
 print(llamandonadine.familia)
 print(llamandonadine.llamar('ollanta'))
 ```
+
