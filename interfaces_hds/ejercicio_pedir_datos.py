@@ -50,6 +50,5 @@ cuadro_texto.grid(row='2',column='1')
 
 cuadro_texto=Entry()
 cuadro_texto.grid(row='4',column='1') 
-
-
+########
 ventana.mainloop()
