@@ -62,3 +62,5 @@ Finalmente, root.mainloop() se utiliza para iniciar el bucle principal de la apl
 
 
 # ejemplo practico -- main.py
+
+

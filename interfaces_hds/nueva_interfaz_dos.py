@@ -26,3 +26,4 @@ widget_dos.config(bg='green')
 # usar el metodo, es la funcionalidad, mainloop para que se mantenga abierta
 
 ventana.mainloop()
+

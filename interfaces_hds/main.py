@@ -22,3 +22,5 @@ etiqueta.pack()
 # Ejecutar el bucle principal de la ventana
 ventana.mainloop()
 
+
+

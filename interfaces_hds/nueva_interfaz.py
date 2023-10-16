@@ -35,3 +35,5 @@ nueva_ventana.mainloop()
 
 
 ## otro metodo similar a pack, para poner dos colores de fondo
+
+
