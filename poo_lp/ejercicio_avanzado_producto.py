@@ -49,6 +49,7 @@ productos=[
         'moneda':'soles'
     }
 ]
+
 ## casos de uso
 class Producto:
     ## atributos de clase
@@ -95,9 +96,10 @@ class Producto:
         producto_eliminar=productos.pop(id-1)
         return f"el siguiente producto fue eliminado {producto_eliminar}"
 
-    def actualizar_producto(self, id):
-        
+    def actualizar_producto(self, id, clave, valor):
+        productos[id-1][clave]=valor
         pass
+    
 
 prod=Producto('aceite', 'extra virgen',2, 'botella x litro', 12.5)
 print(prod.registrar_producto())
@@ -105,4 +107,7 @@ print(prod.mostrar_productos())
 print(prod.mostrar_producto(1))
 print(prod.eliminar_producto(2))
 print(prod.mostrar_productos())
+print(prod.actualizar_producto(1,clave='nombre',valor='pan'))
+print(prod.mostrar_productos())
+
 
