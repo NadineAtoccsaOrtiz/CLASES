@@ -32,7 +32,7 @@
 # ]
 
 ## cometar crtl + k + c
-
+## descomentar crtl + k + u
 
 ## entidad o entitis
 #base de datos sobre lo que voy a trabajar 
@@ -107,7 +107,7 @@ print(prod.mostrar_productos())
 print(prod.mostrar_producto(1))
 print(prod.eliminar_producto(2))
 print(prod.mostrar_productos())
-print(prod.actualizar_producto(1,clave='nombre',valor='pan'))
+print(prod.actualizar_producto(1,clave='nombre',valor='aceite'))
 print(prod.mostrar_productos())
 
 
