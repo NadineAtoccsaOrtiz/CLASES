@@ -13,19 +13,19 @@ from tkinter import *
 # 2.- instanciar tk() como generador de interfaz grafica 
 #como instanciamos la clase, con una variable
 
-nueva_ventana=tk.tk()
+nueva_ventana=Tk()
 
 # otra herramienta, la parte basica de tk(), es el frame
 
 # 3.  frame es tambien una clase = debe tener la primera letra con mayuscula 
 # tiene atributos, funcionalidades
 # para crear un frame primero tengo que instanciar , crear una variable donde se  almacene una clase
-menu_principal=frame()
+menu_principal=Frame()
 menu_principal.pack() # para empaquetar metodo para que funcione la configuracion, montamos o inicializamos el frame
 # haciendo uso del metodod config loe asiganmos tamaño y color 
 
 # intsanciamos nuestrta clase
-menu_principal.config(width='200', height='200')
+menu_principal.config(height='200',width='200')
 # le damos un tamaño, ancho de 200 y largo de 200, creamos un cuadrado
 # le damos un color con bg = bag graw
 menu_principal.config(bg ='red')
