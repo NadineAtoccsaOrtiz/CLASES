@@ -56,7 +56,7 @@ class Alumno:
 
     def eliminar_alumno(self, id):
         alumno_eliminar=alumnos.pop(id-1)
-        return f"el siguiente producto fue eliminado: {alumno_eliminar}"
+        return f"el siguiente alumno fue eliminado: {alumno_eliminar}"
 
     def actualizar_alumno(self, id, clave, valor):
         alumnos[id-1][clave]=valor
@@ -70,5 +70,5 @@ print(a.registrar_alumno())
 print(a.mostrar_alumnos())
 print(a.eliminar_alumno(2))
 print(a.mostrar_alumnos())
-print(a.actualizar_alumno(1,clave='edad',valor='aceite'))
+print(a.actualizar_alumno(1,clave='edad',valor='60'))
 

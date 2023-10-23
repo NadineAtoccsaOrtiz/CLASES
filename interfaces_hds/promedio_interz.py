@@ -2,7 +2,7 @@ from tkinter import*
 ventana=Tk()
 
 def promedio():
-    dato=notas.get.split(",")
+    dato=notas.get().split(",")
     suma=0
     for n in dato:
         suma=suma+int(n)

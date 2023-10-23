@@ -26,7 +26,7 @@ def limpiar():
 
            
 ventana =Tk()
-ventana.title('Evalua tu Edad😄')
+ventana.title('CORREO😄')
 ventana.geometry("300x200")
 ventana.config(bg='grey')
 
