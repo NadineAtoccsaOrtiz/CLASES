@@ -20,6 +20,8 @@ etiqueta=Label(ventana, text='hola soy una etiqueta sexy xd')
 etiqueta.grid(row=1, column=0)
 ## label es una clase, primer parametro, damos el lugar donde se va crear la etiqueta,
 # y el segundo va el texto que quiero mostrar
+# label sirve para mostrar texto
+
 ventana.mainloop()
 
 ## pack empaqueta apila, agrega 
