@@ -15,7 +15,7 @@ alumnos=[
 
 
 class Alumno:
-   
+
     def __init__(self, nombre, apellido, dni, edad, sexo, periodo, programa):
         self.nombre=nombre
         self.apellido=apellido
@@ -26,7 +26,7 @@ class Alumno:
         self.programa=programa
 
 
-   
+
     def mostrar_alumnos(self):
         mensaje=f"""
         tienes {len(alumnos)} alumnos registrados

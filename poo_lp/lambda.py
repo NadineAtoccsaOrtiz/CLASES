@@ -80,11 +80,12 @@ print(nuevo_objeto)
 #  ejemplo 
 tiendas = [
     {
+        'ruc':2060156458,
         'nombre':'el pichito',
         'categoria':['abarrotes', 'bodega'], # va ser un array, puede devolver dos funciones o uno o tres
         'horario_atencion':{
-            'dia': 7am-12pm',
-            'tarde': 2pm - 8pm
+            'dia': '7am-12pm',
+            'tarde': '2pm - 8pm'
                         },
         'gerente': ' nadine' # va ser un objeto y va devolver dos 
     }
@@ -103,4 +104,4 @@ tiendas = [
 # 1. crear unna clase que tenga los siguientes metodos o casos de uso
 # - crear un metodo  que me filtre las tiendas que tienen cada gerente pasandole el parametro de cada uno: por ejemplo si digo edwin me muestra las tiendas de edwin
 # - crear un metodo que muestre los negocios que tienen mas de dos categorias
-# - crear un metodo que me muestre solo el nombre de las tiendas
+# - crear un metodo que me muestre solo el nombre y el ruc de las tiendas
