@@ -9,7 +9,7 @@ class Tiendas:
         {c}'''
         
     def tienda_ctg(self,cat):
-        b=list(filter(lambda par:par['categoria']==cat,negocios))
+        b=list(filter(lambda par:par['categoria'][0]==cat,negocios))
         return f'''Las tiendas que estan en categoria {cat}: 
         ..........................................................................................................................................................................................................
         {b}'''
@@ -44,7 +44,7 @@ class Tiendas:
 
 a=Tiendas()
 #print(a.gerente(negocios,'Lourdes'))
-#rint(a.tienda_ctg('bodega'))
+#print(a.tienda_ctg('bodega'))
 #print(a.ruc_nombre())
 #print(a.mostrar_negocio(negocios,'Lulu'))
 #print(a.mostrar_tiendas())
