@@ -26,8 +26,8 @@ class Tiendas:
         .................................................................................................................................................................................................................
         {nuevo_objeto}'''
 
-    def mostrar_negocio(self, bd_nego, nombre_negocio):
-        g=list(filter(lambda par:par['nombre']==nombre_negocio,bd_nego))
+    def mostrar_negocio(self, ide):
+        g=list(filter(lambda par:par['id']==ide,negocios))
         return f'''Aqui tienes informacion de la tienda que buscaste:
         .................................................................................................................................................................................................................... 
         {g}'''
@@ -41,6 +41,18 @@ class Tiendas:
         """
         return mensaje
     
+    def eliminar_negocio(self, id):
+        negocio_eliminar=negocios.pop(id-1)
+        return f"el siguiente producto fue eliminado {negocio_eliminar}"
+
+    def actualizar_negocio(self,id, clave,valor):
+        ol=valor
+        producto_actualizar=list(filter(lambda obj:obj[clave]==id,negocios))[0].update({clave:valor}) 
+        return 'se actualizo'
+
+    def borrar(self, ruc):
+        re=list(filter(lambda el:el['ruc']!=ruc,negocios))
+        return re
 
 a=Tiendas()
 #print(a.gerente(negocios,'Lourdes'))
@@ -48,4 +60,13 @@ a=Tiendas()
 #print(a.ruc_nombre())
 #print(a.mostrar_negocio(negocios,'Lulu'))
 #print(a.mostrar_tiendas())
-print(a.categorias_tienda(negocios))
+#print(a.categorias_tienda(negocios))
+
+print(a.eliminar_negocio(1))
+print(a.actualizar_negocio('Lulu','nombre','gatuno'))
+print(a.mostrar_negocio(2))
+#print(a.borrar(2365897412))
+
+# tarea
+## otro metodo para crear un nuevo producto
+## otro metodo para actu8alizar el horario de atencion

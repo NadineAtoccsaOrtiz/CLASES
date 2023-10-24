@@ -120,8 +120,8 @@ class Producto:
 ## averiguar sobre programacion funcional en python
 
 prod=Producto('2023-b','aceite', 'extra virgen',2, 'botella x litro', 12.5)
-print(prod.registrar_producto())
-print(prod.mostrar_productos())
+# print(prod.registrar_producto())
+# print(prod.mostrar_productos())
 print(prod.actualizar_producto(125,'precio','130'))
 print(prod.mostrar_productos())
 # print(a.actualizar_alumno(1,clave='edad',valor='aceite'))
