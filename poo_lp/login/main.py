@@ -13,16 +13,16 @@ class Usuario:
     def edad(self):
         pass #hoy=
     
-    def actualizar_edad(self):
-        
-        pass
+    def actualizar_edad(self,dni,clave,valor):
+        negocios[dni][clave]=valor
+        return 'se actualizo la edad'
 
     def ver_usuario(self,dni):
         g=list(filter(lambda par:par['dni']==dni,usuarios))
         return f'''El usuario si existe:
         ...
         {g}'''
-        return 'el usuario no existe'
+
 
     def validar(self, usuario):
         # usuario=
@@ -34,4 +34,5 @@ b=Usuario()
 # verificar si usuario esta registrado o existe en mis registros
 # validar usuario y password
 
-print(b.ver_usuario(75248696))
+# print(b.ver_usuario(75248696))
+print(b.actualizar_edad(75248698,'edad',''))
