@@ -12,7 +12,6 @@ def eval():
         mensaje.grid(row=3)
 
     #mensaje=Label(ventana,text=f'''Hola {txt}, Tienes {ed}  y eres ''') 
-         
         
 ventana =Tk()
 ventana.title('Evalua tu Edad😄')
