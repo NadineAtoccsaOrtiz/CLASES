@@ -1,6 +1,6 @@
 from tkinter import *
 ventana=Tk()
-ventana.title('CALCULADORA')
+ventana.geometry("300x300")
 
 ##clase operadores
 class Operadores:
@@ -21,16 +21,16 @@ def manejadorOperaciones():
   num1=int(textoUno.get())
   num2=int(textoDos.get())
   ope=operacion.get()
-  if ope=="+":
+  if ope=="Suma":
     resultado=classOperadores.sumar(num1,num2)
     Label(ventana,text=f"el resultado de la suma es: {resultado}").pack()
-  elif ope=="-":
+  elif ope=="Resta":
     resultado=classOperadores.restar(num1,num2)
     Label(ventana,text=f"el resultado de la resta es: {resultado}").pack()
-  elif ope=="/":
+  elif ope=="Division":
     resultado=classOperadores.dividir(num1,num2)
     Label(ventana,text=f"el resultado de la Division es: {resultado}").pack()
-  elif ope=="*":
+  elif ope=="Multiplicacion":
     resultado=classOperadores.multiplicar(num1,num2)
     Label(ventana,text=f"el resultado de la Multiplicacion es: {resultado}").pack()
 
@@ -50,14 +50,12 @@ textoResultado=Entry(ventana)
 textoResultado.pack()
 
 ##opciones
-opcionSuma=Radiobutton(ventana,text="+",value="+",variable=operacion).pack()
-opcionResta=Radiobutton(ventana,text="-",value="-",variable=operacion).pack()
-opcionDivision=Radiobutton(ventana,text="/",value="/",variable=operacion).pack()
-opcionMultiplicacion=Radiobutton(ventana,text="*",value="*",variable=operacion).pack()
+opcionSuma=Radiobutton(ventana,text="Suma",value="Suma",variable=operacion).pack()
+opcionResta=Radiobutton(ventana,text="Resta",value="Resta",variable=operacion).pack()
+opcionDivision=Radiobutton(ventana,text="Division",value="Division",variable=operacion).pack()
+opcionMultiplicacion=Radiobutton(ventana,text="Multiplicacion",value="Multiplicacion",variable=operacion).pack()
 
 ##botones
-b1=Button(ventana,text='1',command==)
-
 botonCalcular=Button(ventana,text="calcular",command=manejadorOperaciones)
 botonCalcular.pack()
 
