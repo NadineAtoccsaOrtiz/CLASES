@@ -2,7 +2,7 @@ from tkinter import *
 ventana=Tk() 
 ventana.config(bg="#C25375")
 ventana.title('CALCULADORA')
-  
+
 widget_uno=Frame() 
 widget_uno.grid(row=6,column=0) 
 widget_uno.config(height='30',width='30') 
@@ -12,7 +12,7 @@ widget_uno=Frame()
 widget_uno.grid(row=8,column=0) 
 widget_uno.config(height='20',width='20')
 widget_uno.config(bg='#C25375')
-  
+
 widget_un=Frame() 
 widget_un.grid(row=1,column=1) 
 widget_un.config(height='30',width='30')
@@ -50,8 +50,7 @@ class Operadores:
 		n1=int(num1.get())
 		n2=int(num2.get())
 		div=n1//n2
-		return result.insert(0,div)
-		 
+		return result.insert(0,div)		 
 		 
 datos=IntVar() 
 op=Operadores()
@@ -63,10 +62,9 @@ def operar():
     if datos.get()==2:
         return (op.multiplicar())
     else: 
-        return (op.dividir())
-            
-  
-  
+        return (op.dividir()) 
+               
+## botones 
 radios=Radiobutton(ventana,text='SUMAR',value=1,variable=datos) 
 radios.grid(row=1,column=2) 
   
@@ -79,11 +77,6 @@ radiom.grid(row=3,column=2)
 radiod=Radiobutton(ventana,text='DIVIDIR ',value=3,variable=datos) 
 radiod.grid(row=4,column=2) 
 
-
-boton_calcular=Button(ventana,text='CALCULAR',foreground="#000000",activeforeground="#1806A9",font=("Lucida Console", 10, "bold"),relief=RAISED,command=operar).grid(row=7,column=0)
-
-  
-
 def limpiar(): 
     num1.delete(0,END) 
     num2.delete(0,END)
@@ -93,9 +86,15 @@ def limpiar():
 def limpiar_resultado(): 
     result.delete(0,END) 
     result.focus()
-    
+
+num1.focus()
+
+boton_calcular=Button(ventana,text='CALCULAR',foreground="#000000",activeforeground="#1806A9",font=("Lucida Console", 10, "bold"),relief=RAISED,command=operar).grid(row=7,column=0)
+num1.focus()
+
 limpiar_todo=Button(ventana,text='Limpiar todo',foreground="#000000",activeforeground="#1806A9",font=("Lucida Console", 10, "bold"),relief=RAISED,command=limpiar).grid(row=7,column=2) 
 
-limpiar_result=Button(ventana,text='Limpiar resultado',foreground="#000000",activeforeground="#1806A9",font=("Lucida Console", 10, "bold"),relief=SUNKEN,command=limpiar_resultado).grid(row=9,column=2) 
+limpiar_result=Button(ventana,text='Limpiar resultado',foreground="#000000",activeforeground="#1806A9",font=("Lucida Console", 10, "bold"),relief=RAISED,command=limpiar_resultado).grid(row=9,column=2) 
   
 ventana.mainloop()
+
