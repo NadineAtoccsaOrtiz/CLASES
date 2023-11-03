@@ -1,5 +1,5 @@
 from tkinter import *
-from funciones import enviar_dato 
+ 
 ventana = Tk()
 ventana.title("Calculadora")
 
