@@ -1,8 +1,9 @@
 from tkinter import *
 from funciones import *
+
 ventana=Tk()
 ventana.title('CALCULADORA')
-ventana.geometry('300x300')
+ventana.geometry('296x300')
 ventana.resizable(0,0)
 fuente=('arial',9,'bold')
 
@@ -41,35 +42,35 @@ boton7.grid(row=3, column=0)
 boton8.grid(row=3, column=1)
 boton9.grid(row=3, column=2)
 boton0.grid(row=4, column=0)
-botonpunto.grid(row=5, column=0)
-
+botonpunto.grid(row=4, column=2)
 # boton suma
-boton_suma = Button(ventana, text="+",height=3, width=9, bg='white',fg='red',borderwidth=0,cursor='hand2', font=fuente, command=lambda: enviar_dato('+',pantalla))#, command=lambda: click_boton("+"))
+boton_suma = Button(ventana, text="+",height=3, width=9, bg='white',fg='red',borderwidth=0,cursor='hand2', font=fuente, command=lambda: operacion('+',pantalla))
 boton_suma.grid(row=1, column=3)
 
 # boton resta
-boton_resta = Button(ventana, text="-",height=3, width=9, bg='white',fg='red',borderwidth=0,cursor='hand2', font=fuente, command=lambda: enviar_dato('-',pantalla))#, command=lambda: click_boton("-"))
+boton_resta = Button(ventana, text="-",height=3, width=9, bg='white',fg='red',borderwidth=0,cursor='hand2', font=fuente, command=lambda: operacion('-',pantalla))#, command=lambda: click_boton("-"))
 boton_resta.grid(row=2, column=3)
 
 # boton multiplicacion
-boton_mult = Button(ventana, text="*",height=3, width=9, bg='white',fg='red',borderwidth=0,cursor='hand2', font=fuente, command=lambda: enviar_dato('*',pantalla))#, command=lambda: click_boton("*"))
+boton_mult = Button(ventana, text="*",height=3, width=9, bg='white',fg='red',borderwidth=0,cursor='hand2', font=fuente, command=lambda: operacion('*',pantalla))#, command=lambda: click_boton("*"))
 boton_mult.grid(row=3, column=3)
 
 # boton division
-boton_div = Button(ventana, text="/",height=3, width=9, bg='white',fg='red',borderwidth=0,cursor='hand2', font=fuente, command=lambda: enviar_dato('/',pantalla))#, command=lambda: click_boton("/"))
+boton_div = Button(ventana, text="/",height=3, width=9, bg='white',fg='red',borderwidth=0,cursor='hand2', font=fuente, command=lambda: operacion('/',pantalla))#, command=lambda: click_boton("/"))
 boton_div.grid(row=4, column=3)
 
 # boton igual
-boton_igual = Button(ventana, text="=", height=3, width=9, bg='white',fg='red',borderwidth=0,cursor='hand2', font=fuente, command=lambda: enviar_dato('=',pantalla))# , command=manejadorOperaciones)
+boton_igual = Button(ventana, text="=", height=3, width=9, bg='white',fg='red',borderwidth=0,cursor='hand2', font=fuente, command=lambda: igual(pantalla))# , command=manejadorOperaciones)
 boton_igual.grid(row=4, column=1)
 
 # boton borrar
-boton_borrar = Button(ventana, text="Borrar",height=3, width=9, bg='white',fg='red',borderwidth=0,cursor='hand2', font=fuente)#, command=borrar)
-boton_borrar.grid(row=4, column=2) 
+# boton_borrar = Button(ventana, text="Borrar",height=3, width=9, bg='white',fg='red',borderwidth=0,cursor='hand2', font=fuente, command=lambda:borrar(pantalla))
+# boton_borrar.grid(row=4, column=2) 
 
 # boton clear
-boton_clear=Button(ventana, text="CLEAR",height=3, width=9, bg='white',fg='red',borderwidth=0,cursor='hand2', font=fuente, command=lambda: enviar_dato(1,pantalla))#, command=lambda: click_boton("/"))
-boton_clear.grid(row=5,column=1,columnspan=4)
+boton_clear=Button(ventana, text="CLEAR",height=3, width=9, bg='white',fg='red',borderwidth=0,cursor='hand2', font=fuente, command=lambda:clear(pantalla))#, command=lambda: click_boton("/"))
+boton_clear.grid(row=5,column=0,columnspan=4)
+
 
 
 ventana.mainloop()
