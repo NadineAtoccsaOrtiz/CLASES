@@ -22,7 +22,4 @@ mostrar_markdown=Markdown(texto)
 print(mostrar_markdown)
 
 
-
-
-
 ## cambiar python que tenemos dentro de script en el entorno, clic enn version python, seleccionar interprete
