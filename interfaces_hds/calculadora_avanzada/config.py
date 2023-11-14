@@ -1,9 +1,9 @@
 # vamos a crear las constantes para el tema oscuro, no se modifican por eso ya no son variables, se le conoce como constante, cuando el dato es cambiante deja de ser una simple variable y debe ir en mayuscula.
 COLOR_FONDO_NEGRO='#1a1b28' # adobe color o color picker para el codigo de colores
 COLOR_TEXTO_NEGRO='white'
-COLOR_BOTONES_ESPECIAL_NEGRO='52c9dc'
+COLOR_BOTONES_ESPECIAL_NEGRO="#52c9dc"
 COLOR_BOTON_NEGRO='#1e2435'
-COLOR_CAJA_TEXTO_NEGRO='1a1b28'
+COLOR_CAJA_TEXTO_NEGRO='#1a1b28'
 
 # constantes para el tema claro 
 COLOR_FONDO_LIGHT='#ffffff' # adobe color o color picker para el codigo de colores
