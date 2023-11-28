@@ -64,18 +64,54 @@ def insertarAlumnos(lista):
     conectar.commit()
     conectar.close()
     
-if __name__ == "__main__":
-    insertarAlumno('jory',20)
-    insertarAlumno('china',12)
-    alumn=[
-        ('jor',50),
-        ('china',60),
-        ('nadine',18),
-        ('mochi',15),
-        ('viuda negra',300)
-        ]
+# if __name__ == "__main__":
+    # insertarAlumno('jory',20)
+    # insertarAlumno('china',12)
+    # alumn=[
+    #     ('jory',50),
+    #     ('china',60),
+    #     ('nadine',18),
+    #     ('mochi',15),
+    #     ('viuda negra',300)
+    #     ]
     
-    insertarAlumnos(alumn)
+    # insertarAlumnos(alumn)
+
+def actualizarAlumno(id, nombre, edad):
+    conectar = connect("./base_de_datos/tecnologico.bd")
+    cursor = conectar.cursor()
+    sentencia = f"UPDATE Alumnos SET nombre = '{nombre}', edad = {edad} WHERE id = {id}"
+    cursor.execute(sentencia)
+    conectar.commit()
+    conectar.close()
+
+# def actualizarCurso(id, nombre, id_alumno):
+#     conectar = connect("./base_de_datos/tecnologico.bd")
+#     cursor = conectar.cursor()
+#     sentencia = f"UPDATE Cursos SET nombre = '{nombre}', id_alumnos = {id_alumno} WHERE id = {id}" 
+#     cursor.execute(sentencia)
+#     conectar.commit()
+#     conectar.close()
+
+def eliminarAlumno(id):
+    conectar = connect("./base_de_datos/tecnologico.bd")
+    cursor = conectar.cursor()
+    sentencia = f"DELETE FROM Alumnos WHERE id = {id}"
+    cursor.execute(sentencia)
+    conectar.commit()
+    conectar.close()
+
+def eliminarCurso(id):
+    conectar = connect("./base_de_datos/tecnologico.bd")
+    cursor = conectar.cursor()
+    sentencia = f"DELETE FROM Cursos WHERE id = {id}"
+    cursor.execute(sentencia)
+    conectar.commit()
+    conectar.close()
+
+if __name__ == "__main__":
+    actualizarAlumno(1,'jory',250)
+    eliminarAlumno(28)
 
 ## tarea, actualizar y eliminar alumnos
 
