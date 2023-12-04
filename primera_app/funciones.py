@@ -86,3 +86,4 @@ def f_dobleClick(ventana,event):
     else:
         showinfo(title="ACTUALIZAR",message="Ningun registro seleccionado para actualizar")
         ventana.tabla_datos.selection_remove(elem_actualizar)
+        
