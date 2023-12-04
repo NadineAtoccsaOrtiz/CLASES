@@ -60,15 +60,10 @@ class InterfazApp(Tk):
         self.tabla_datos.heading("#0",text="Nombres")
         self.tabla_datos.heading("#1",text="Apellidos")
         self.tabla_datos.heading("#2",text="Celular")
-        alumnitos=[
-            ("moises","peñadira","564646441"),
-            ("tarantula","medafiel","987654321"),
-            ("maria","de jory","9877854321"),
-            ("nadine","guadalupe","98888654321")
-        ]
-        for nom,ape,cel in alumnitos:
+        alumnitos=mostrar()
+        for id,nom,ape,cel in alumnitos:
             self.tabla_datos.insert("",END,text=nom,values=(ape,cel))
-        
+        print(alumnitos)
         self.tabla_datos.bind("<Double-1>",lambda event:f_dobleClick(self,event))
         self.tabla_datos.place(x=0,y=0,width=400,height=600)
         #FIN DE TABLA DE DATOS

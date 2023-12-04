@@ -44,7 +44,8 @@ def f_eliminar(ventana):
         f_limpiar(ventana)
     else:
         showinfo(title="ADVERTENCIA", message="Selecciona una fila para eliminar.")
-
+def mostrar():
+    return db.mostrar("Cliente")
 def f_actualizar(ventana):
     if ventana.nombre_texto.get()=="":
         showerror(title="SIN DATOS",message="Eres huevon no hay nada para actualizar")

@@ -52,14 +52,14 @@ class SQLiteORM:
 
         self.cursor.execute(query)
         rows = self.cursor.fetchall()
-        columns = [desc[0] for desc in self.cursor.description]
+        # columns = [desc[0] for desc in self.cursor.description]
 
-        results = []
-        for row in rows:
-            result_dict = dict(zip(columns, row))
-            results.append(result_dict)
-        formateo_json=json.dumps(results, indent=4)
-        return formateo_json
+        # results = []
+        # for row in rows:
+        #     result_dict = dict(zip(columns, row))
+        #     results.append(result_dict)
+        # formateo_json=json.dumps(results, indent=4)
+        return rows
 
     def cerrar(self):
         self.conn.close()
