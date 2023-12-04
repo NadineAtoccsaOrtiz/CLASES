@@ -1,7 +1,7 @@
 Cliente={
     'Cliente':{
-        'Nombre':'TEXT',
-        'Apellido':'TEXT',
-        'Celular':'INTEGER'
+        'nombre':'TEXT',
+        'apellido':'TEXT',
+        'celular':'INTEGER'
     }
 }

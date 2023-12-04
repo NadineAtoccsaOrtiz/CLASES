@@ -2,76 +2,86 @@ from tkinter import *
 from tkinter.messagebox import *
 import orm
 from tablas.Cliente import Cliente
-#creamos nuestra base de datos
-db = orm.SQLiteORM("db_Cliente")
+db = orm.SQLiteORM("Cliente")
 db.crear_tabla(Cliente)
-#funcion limpiar
 
-def limpiar(ventana):
+def f_limpiar(ventana):
     ventana.nombre_texto.delete(0,END)
-    ventana.apellido_texto.delete(0,END)
+    ventana.apellidos_texto.delete(0,END)
     ventana.celular_texto.delete(0,END)
+
     ventana.nombre_texto.focus()
 
-def nuevo(ventana):
-    name = ventana.nombre_texto.get()
-    apellido = ventana.apellido_texto.get()
-    celular = ventana.celular_texto.get()
+def f_nuevo(ventana):
+    nombre=ventana.nombre_texto.get()
+    apellido=ventana.apellidos_texto.get()
+    celular=ventana.celular_texto.get()
+    ventana.tabla_datos.insert("",END,text=nombre,values=(apellido,celular))
     date = {
-        "Nombre":name,
+        "Nombre":nombre,
         "Apellido":apellido,
         "Celular":celular
     }
     db.insertarUno('Cliente',date)
-    showinfo(title='Guardar', message='nuevo registro agregado')
+    showinfo(title='save', message='nuevo registro agregado')
     #nuevo
     id = db.mostrar('Cliente', where=f'Celular={celular}')[0][0]
-    ventana.tabla_datos.insert('',END, text=id, values=(name,apellido,celular))
-    limpiar(ventana)
-#eliminar 
-def eliminar(ventana):
-    elemento_eliminar = ventana.tabla_datos.selection()
-    dato = ventana.tabla_datos.item(elemento_eliminar)['text'] 
-    ventana.tabla_datos.delete(elemento_eliminar)
-    db.eliminar('Cliente',where=f'id= "{dato}"')
-    showwarning(title='Eliminar', message='registro eliminado')
+    showinfo(title="Nuevo",message="Nuevo contacto agregado")
+    f_limpiar(ventana)
 
-def actualizar(ventana):
-    if ventana.nombre_texto.get()=='':
-        showerror(title='error', message='que va actualizar si noy nada')
+def f_eliminar(ventana):
+    item_seleccionado = ventana.tabla_datos.selection()
+
+    if item_seleccionado:
+        dato = ventana.tabla_datos.item(item_seleccionado)['text']
+        ventana.tabla_datos.delete(item_seleccionado)
+
+        if db.eliminar('Cliente', where=f'id={dato}'):
+            showwarning(title="ELIMINAR", message="Registro eliminado")
+        else:
+            showerror(title="ERROR", message="Error al eliminar el registro")
+        
+        f_limpiar(ventana)
     else:
-        nombre = ventana.nombre_texto.get()
-        apellidos = ventana.apellido_texto.get()
-        celular = ventana.celular_texto.get()
-        elemento_actualizar = ventana.tabla_datos.selection()
-        date = ventana.tabla_datos.item(elemento_actualizar)['text']
-        mensaje = askyesno(title='actualizar', message='estas seguro que deseas actulizar esta hvda')
+        showinfo(title="ADVERTENCIA", message="Selecciona una fila para eliminar.")
+
+def f_actualizar(ventana):
+    if ventana.nombre_texto.get()=="":
+        showerror(title="SIN DATOS",message="Eres huevon no hay nada para actualizar")
+    else:
+        nombre=ventana.nombre_texto.get()
+        apellidos=ventana.apellidos_texto.get()
+        celular=ventana.celular_texto.get()
+        elem_actualizar=ventana.tabla_datos.selection()
+        date = ventana.tabla_datos.item(elem_actualizar)['text']
+        mensaje=askyesno(title="Actualizar",message="Estas seguro que deseas actualizar")
         if mensaje == True:
-            limpiar(ventana)
+            f_limpiar(ventana)
             update = {
                 'Nombre':nombre,
                 'Apellido':apellidos,
                 'Celular':celular
                 }
-            ventana.tabla_datos.selection_remove(elemento_actualizar)
+            ventana.tabla_datos.selection_remove(elem_actualizar)
             db.actualizar('Cliente',update,where=f'id={date}')
-            return ventana.tabla_datos.item(elemento_actualizar,text=date, values=(nombre,apellidos,celular))
+            return ventana.tabla_datos.item(elem_actualizar,text=nombre,values=(apellidos,celular))
         else:
-            showinfo(title='no actualizo', message='no esta seleccionado')
-            ventana.tabla_datos.selection_remove(elemento_actualizar)
+            showinfo(title="NO ACTUALIZO",message="No se actualizo ningun registro")
+            f_limpiar(ventana)
+            ventana.tabla_datos.selection_remove(elem_actualizar)
 
-        
-def doble_clic(ventana,event):
-    elemento_actualizar=ventana.tabla_datos.selection()
-    captura_datos = ventana.tabla_datos.item(elemento_actualizar)
-    mensaje = askyesno(title='actualizar', message='desde el registro')
+def f_dobleClick(ventana,event):
+    elem_actualizar=ventana.tabla_datos.selection()
+    captura_datos=ventana.tabla_datos.item(elem_actualizar)
+    mensaje=askyesno(title="ACTUALIZAR",message="Desea actualizar los datos")
     if mensaje == True:
-        nombre = captura_datos['values'][0]
-        apellidos = captura_datos['values'][1]
-        celulular = captura_datos['values'][2]
+        nombre=captura_datos["text"]
+        apellidos=captura_datos["values"][0]
+        celular=captura_datos["values"][1]
         ventana.nombre_texto.insert(0,nombre)
-        ventana.apellido_texto.insert(0,apellidos)
-        ventana.celular_texto.insert(0,celulular)
+        ventana.apellidos_texto.insert(0,apellidos)
+        ventana.celular_texto.insert(0,celular)
+        ventana.tabla_datos.selection_remove(elem_actualizar)
     else:
-        showinfo(title='actualizar',message='ningún registro seleccionado para actualizar')
-        ventana.tabla_datos.selection_remove(elemento_actualizar)
+        showinfo(title="ACTUALIZAR",message="Ningun registro seleccionado para actualizar")
+        ventana.tabla_datos.selection_remove(elem_actualizar)
